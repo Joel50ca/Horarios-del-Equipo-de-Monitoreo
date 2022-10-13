@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    margin-left: 80px;
+    margin-top: 80px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  background: rgb(15, 15, 15);
+}
+
+main{
+    padding: 20px;
+    
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background: #000000;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+.icon__menu{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+}
+
+.icon__menu i{
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.menu__side{
+    width: 80px;
+    height: 100%;
+    background:#000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 20px solid #000000;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/*Ocultar scroll para chrome, safari y opera*/
+.menu__side::-webkit-scrollbar{
+    display: none;
+}
+
+/*Ocultar scroll para IE, Edge y Firefox*/
+.menu__side{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+.name__page{
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.name__page i{
+    width: 20px;
+    margin-right: 20px;
+}
+
+.options__menu{
+    padding: 20px 30px;
+    position: absolute;
+    top: 80px;
+}
+
+.options__menu a{
+    color: #ffffff;
+    cursor: default;
+    display: block;
+    position: relative;
+    transition: color 300ms;
+}
+
+.options__menu a:hover{
+    color: rgb(184, 177, 177);
+}
+
+.options__menu .option{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.options__menu .option i{
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.options__menu .option h4{
+    font-weight: 300;
+    cursor: pointer;
+}
+
+a.selected{
+    color: #fff;
+}
+
+.selected:before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    background: white;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+}
+
+/*Clases para usar en JavaScript*/
+
+.body_move{
+    margin-left: 250px;
+}
+
+.menu__side_move{
+    width: 250px;
+}
+
+
+@media screen and (max-width: 760px){
+    .body_move{
+        margin-left: 0px;
+    }
+
+    .menu__side_move{
+        width: 80px;
+        left: -80px;
+    }
+}
+
+
+/*asasda*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif; 
+}
+
+.container__card{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card__father{
+    margin: 20px;
+    perspective: 1000px;
+    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, rgba(0,0,0,0.2));
+}
+
+.card__father:hover .card{
+    transform: rotateY(180deg);
+}
+
+
+.card{
+    width: 350px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 600ms;
+}
+
+.card__front{
+    
+    background-size: cover;
+    background-position: center;
+}
+ 
+.logo{
+    margin: auto;
+    align-items: center;
+    position: fixed;
+    margin-top: 0px;
+    perspective: 0px;
+    display: flex;
+    left: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.logo2{
+    margin: auto;
+    align-items: center;
+    position: fixed;
+    margin-top: 0px;
+    perspective: 0px;
+    display: flex;
+    left: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cards {
+    margin: 20px;
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    background: var(--i);
+    background-size: cover;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, .8);
+    overflow: hidden;
+}
+
+.contents {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: .5s;
+}
+
+.contents h2, a {
+    color: rgba(255, 255, 255, .8);
+    margin: 10px 0;
+}
+
+.cards:hover .content {
+    opacity: 1;
+}
+
+
+
+
+.card__front,
+.card__back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+    color: white
+}
+
+.card__back{
+    transform: rotateY(180deg);
+    background: rgb(63, 63, 63);
+    
+}
+
+.body__card_front{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 40px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transform: translateZ(60px);
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px;
+}
+
+.body__card_back{
+    padding: 40px;
+    text-align: center;
+    transform: translateZ(60px);
+}
+
+.body__card_back p{
+    margin-top: 30px;
+}
+
+.body__card_back input{
+    padding: 10px 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #58B0F6;
+    box-shadow: 1px 1px 30px -5px #58B0F6;
+    border-radius: 10px;
+    transition: box-shadow 600ms;
+}
+
+.body__card_back input:hover{
+    box-shadow: 1px 1px 30px 0px #449de6;
+    
+}
+
+
+.container__calendar{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.container__calenda{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.container__titul{
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 25px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: rgb(34, 34, 34);
+}
+.container__titu{
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: none;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: rgb(34, 34, 34);
+}
+
+.container__tit{
+    max-width: 100%;
+    height: 760px;
+    margin: auto;
+    margin-top: 25px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: rgb(34, 34, 34);
+}
+
+.card__caler{
+    margin: 20px;
+    perspective: 1000px;
+}
+
+.calenda {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: rgb(43, 43, 43);
+    
+  }
+.calend{
+    margin-top: 5px;
+    cursor: pointer;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: center;
+    background: rgb(46, 46, 46);
+  }
+
+  .first-da {
+    grid-column-start: 5;
+    
+  }
+  .first-dae {
+    grid-column-start:3;
+  }
+
+  .calenda-wrapper {
+    width: 280px;
+    
+    
+  }
+  .weekda {
+    background: rgb(63, 63, 63);
+  }
+
+  .weekd {
+    color: rgb(131, 130, 130);
+  }
+
+.h1  {
+    text-align: center;
+    color: white;
+    background: rgb(43, 43, 43);
+  }
+
+  .title {
+    text-align: left;
+    padding-top: 10px;
+    color: rgb(255, 255, 255);
+  }
+
+  .titl {
+    text-align: center;
+    padding-top: 10px;
+    background: rgb(63, 63, 63);
+    color: rgb(255, 255, 255);
+    margin-top: 5px;
+  }
+  .mostrar {
+    text-align:end;
+    text-align: left;
+    padding-top: 60px;
+    color: rgb(255, 255, 255);
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+  }
+li{
+    list-style: none;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    padding-bottom: 10px;
+    
+  }
